@@ -16,7 +16,7 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping("/{id}")
-    public String product(@PathVariable long id, Model model) {
+    public String product(@PathVariable int id, Model model) {
         Product product = productService.getProductById(id).orElse(null);
         model.addAttribute("product", product);
         return "product";

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form th:action="@{/products/add}" th:object="${product}" method="POST">
+    <label>Enter Product name</label>
+    <input type="text" name="product" th:field="*{name}">
+    <input type="submit" value="Add">
+</form>
+</body>
+</html>

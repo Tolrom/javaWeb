@@ -17,6 +17,10 @@ public class Product {
     @Column(name = "price", nullable = false)
     private double price;
 
+    @ManyToOne
+    @JoinColumn(name = "id_category")
+    private Category category;
+
     public Product() {
     }
 
